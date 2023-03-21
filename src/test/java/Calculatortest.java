@@ -1,0 +1,66 @@
+import calculator.Calculator;
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class Calculatortest {
+    private static final double DELTA = 1e-15;
+    Calculator calculator = new Calculator();
+
+
+    @Test
+    public void squarerootTruePositive(){
+        assertEquals("sqaure-True Positive", 2, calculator.square(4), DELTA);
+        assertEquals("sqaure-True Positive", 1, calculator.square(1), DELTA);
+    }
+
+    @Test
+    public void squarerootFalsePositive(){
+        assertNotEquals("square-False Positive", 10, calculator.square(4), DELTA);
+        assertNotEquals("square-False Positive", 20, calculator.square(5), DELTA);
+
+    }
+
+    @Test
+    public void factorialTruePositive(){
+        assertEquals("factorial -True Positive", 6, calculator.factorial(3), DELTA);
+        assertEquals("factorial -True Positive", 4, calculator.factorial(2), DELTA);
+    }
+
+    @Test
+    public void factorialFalsePositive(){
+        assertNotEquals("factorial -False Positive", 20, calculator.factorial(5), DELTA);
+        assertNotEquals("factorial -False Positive", 70, calculator.factorial(2), DELTA);
+    }
+
+    @Test
+    public void lnxTruePositive(){
+        assertEquals("lnx of number-True Positive", 2.3026, calculator.lnx(10), DELTA);
+        assertEquals("lnx of number-True Positive", 1.7918, calculator.lnx(6), DELTA);
+    }
+
+    @Test
+    public void lnxFalsePositive(){
+        assertNotEquals("lnx  number-False Positive", 2, calculator.lnx(5), DELTA);
+        assertNotEquals("lnx number-False Positive", -1, calculator.lnx(3), DELTA);
+    }
+
+
+    @Test
+    public void powerTruePositive(){
+        assertEquals("power-True Positive", 8, calculator.power(2,3), DELTA);
+        assertEquals("power-True Positive", 16, calculator.power(2,4), DELTA);
+    }
+
+    @Test
+    public void powerFalsePositive(){
+        assertNotEquals("power-False Positive", 12, calculator.power(120), DELTA);
+        assertNotEquals("power-False Positive", 3, calculator.power(10), DELTA);
+
+    }
+
+
+
+
+
+
+}
