@@ -1,2 +1,2 @@
 [ubuntu18]
-localhost ansible_user=ayush
+localhost ansible_user=ayush ansible_connection=local
