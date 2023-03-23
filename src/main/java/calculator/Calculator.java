@@ -69,7 +69,7 @@ public class Calculator {
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
                     number2 = scanner.nextDouble();
-                    System.out.println("Power of "+number1+" to "+number2+" is : " + calculator.sub(number1,number2));
+                    System.out.println("Power of "+number1+" to "+number2+" is : " + calculator.power(number1,number2));
                     System.out.println("\n");
 
                     break;
@@ -89,11 +89,11 @@ public class Calculator {
     }
     public double factorial(double number1) 
     {
-        logger.info("[factorial] - " + number1);
+     //   logger.info("[factorial] - " + number1);
         if (number1 == 0) {
             return 1;
         } else {
-            return number1 * factorial(x - 1);
+            return number1 * factorial(number1- 1);
         }
         // logger.info("[RESULT - Square ROOT] - " + result);
         
