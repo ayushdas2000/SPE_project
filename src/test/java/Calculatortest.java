@@ -9,14 +9,14 @@ public class Calculatortest {
 
     @Test
     public void squarerootTruePositive(){
-        assertEquals("sqaure-True Positive", 2, calculator.square(4), DELTA);
-        assertEquals("sqaure-True Positive", 1, calculator.square(1), DELTA);
+        assertEquals("sqaure-True Positive", 2, calculator.squareroot(4), DELTA);
+        assertEquals("sqaure-True Positive", 1, calculator.squareroot(1), DELTA);
     }
 
     @Test
     public void squarerootFalsePositive(){
-        assertNotEquals("square-False Positive", 10, calculator.square(4), DELTA);
-        assertNotEquals("square-False Positive", 20, calculator.square(5), DELTA);
+        assertNotEquals("square-False Positive", 10, calculator.squareroot(4), DELTA);
+        assertNotEquals("square-False Positive", 20, calculator.squareroot(5), DELTA);
 
     }
 
@@ -53,8 +53,8 @@ public class Calculatortest {
 
     @Test
     public void powerFalsePositive(){
-        assertNotEquals("power-False Positive", 12, calculator.power(120), DELTA);
-        assertNotEquals("power-False Positive", 3, calculator.power(10), DELTA);
+        assertNotEquals("power-False Positive", 12, calculator.power(2,6), DELTA);
+        assertNotEquals("power-False Positive", 3, calculator.power(3,4), DELTA);
 
     }
 
