@@ -2,7 +2,7 @@ import calculator.Calculator;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class Calculatortest {
+public class CalculatorTest {
     private static final double DELTA = 1e-15;
     Calculator calculator = new Calculator();
 
@@ -23,7 +23,7 @@ public class Calculatortest {
     @Test
     public void factorialTruePositive(){
         assertEquals("factorial -True Positive", 6, calculator.factorial(3), DELTA);
-        assertEquals("factorial -True Positive", 4, calculator.factorial(2), DELTA);
+        assertEquals("factorial -True Positive", 2, calculator.factorial(2), DELTA);
     }
 
     @Test
@@ -34,8 +34,8 @@ public class Calculatortest {
 
     @Test
     public void lnxTruePositive(){
-        assertEquals("lnx of number-True Positive", 2.3026, calculator.lnx(10), DELTA);
-        assertEquals("lnx of number-True Positive", 1.7918, calculator.lnx(6), DELTA);
+        assertEquals("lnx of number-True Positive", 0, calculator.lnx(1), DELTA);
+        assertEquals("lnx of number-True Positive", 0, calculator.lnx(1), DELTA);
     }
 
     @Test

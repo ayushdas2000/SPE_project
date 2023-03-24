@@ -44,7 +44,7 @@ public class Calculator {
                     // factorial
                     System.out.print("Enter the first number : ");
                     number1 = scanner.nextDouble();
-                    
+
                     System.out.println("Factorial of "+number1+"  is : " + calculator.factorial(number1));
                     System.out.println("\n");
 
@@ -80,26 +80,26 @@ public class Calculator {
         } while (true);
     }
 
-    public double squareroot(double number1) 
+    public double squareroot(double number1)
     {
         logger.info("[SquareROOT] - " + number1);
         double result = Math.sqrt(number1);
         logger.info("[RESULT - Square ROOT] - " + result);
         return result;
     }
-    public double factorial(double number1) 
-    {
-     //   logger.info("[factorial] - " + number1);
-        if (number1 == 0) {
-            return 1;
-        } else {
-            return number1 * factorial(number1- 1);
+
+    public double factorial (double number1) {
+        logger.info("[factorial] - " + number1);
+        double result = 1;
+        for(int i = 1; i <= number1; ++i) {
+            result *= i;
         }
-        // logger.info("[RESULT - Square ROOT] - " + result);
-        
+        logger.info("[RESULT - Square ROOT] - " + result);
+        return  result;
     }
 
-    public double lnx(double number1) 
+
+    public double lnx(double number1)
     {
         logger.info("[lnx] - " + number1);
         double result = Math.log(number1);
@@ -110,7 +110,7 @@ public class Calculator {
 
 
 
-    public double power(double number1, double number2) 
+    public double power(double number1, double number2)
     {
         logger.info("[Result - " + number1 + " to the power " + number2);
         double result = Math.pow(number1, number2);
