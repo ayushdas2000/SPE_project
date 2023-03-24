@@ -1,2 +1,5 @@
-[ubuntu18]
-localhost ansible_user=ayush ansible_connection=local
+[ansible_nodes]
+172.16.140.81 ansible_user=ayush
+
+[ansible_nodes:vars]
+ansible_connection=local
